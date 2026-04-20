@@ -1,8 +1,8 @@
 from sentence_transformers import SentenceTransformer
-
-KEY = 'sk-proj-XJYwiH1QviHBnPLIkBcIT3BlbkFJ83Zm052mWPdCedSL3E69'
 from langchain_openai import ChatOpenAI
 from qdrant_client import QdrantClient
+api_key = dotenv.get('OPENAI_API_KEY')
+KEY = api_key
 
 
 class NeuralSearcher:

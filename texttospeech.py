@@ -4,7 +4,7 @@ engine = pyttsx3.init() # object creation
 """ RATE"""
 rate = engine.getProperty('rate')   # getting details of current speaking rate
 print (rate)                        #printing current voice rate
-engine.setProperty('rate', 160)     # setting up new voice rate
+engine.setProperty('rate', 175)     # setting up new voice rate
 
 
 """VOLUME"""
@@ -14,21 +14,25 @@ engine.setProperty('volume',1)    # setting up volume level  between 0 and 1
 
 """VOICE"""
 voices = engine.getProperty('voices')       #getting details of current voice
-#engine.setProperty('voice', voices[0].id)  #changing index, changes voices. o for male
-engine.setProperty('voice', voices[1].id)   #changing index, changes voices. 1 for female
+engine.setProperty('voice', voices[0].id)  #changing index, changes voices. o for male
+# engine.setProperty('voice', voices[1].id)   #changing index, changes voices. 1 for female
 for voice in voices:
     # print(voice)
 
     if voice.languages[0] == "b'\x05hi'":
         engine.setProperty('voice', voice.id)
         break
-engine.say("Namste Reyansh!")
-engine.say('Kya kar rahe ho')
+engine.say("Hello Reyansh!")
+
+engine.runAndWait()
+engine.stop()
+engine.say('tum kutta ho kya??')
 engine.runAndWait()
 engine.stop()
 
 """Saving Voice to a file"""
 # On linux make sure that 'espeak' and 'ffmpeg' are installed
 # engine.save_to_file('Hello World', 'test.mp3')
-engine.runAndWait()
-engine.stop()
+# engine.runAndWait()
+# engine.stop()
+

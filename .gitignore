@@ -1,3 +1,6 @@
 *.env
 **/__pycache__/**
 **/data_google_news
+**/data_wikipedia
+.env
+__pycache__/

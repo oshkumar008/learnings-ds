@@ -1,4 +1,6 @@
+import os
 import tkinter as tk
+os.environ["SDL_AUDIODRIVER"] = "dummy"
 import pygame
 from PIL import Image, ImageTk
 from tkinter import ttk, filedialog, Frame, Label
